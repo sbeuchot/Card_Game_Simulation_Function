@@ -1,6 +1,6 @@
 
 
-card_game_sim <- function(suits, cards, x_greater_than, given_that, histogram=TRUE){
+card_game_sim <- function(suits, cards, x_greater_than, given_that, experiments=20000, histogram=TRUE){
      # returns the expected value and the standard deviation of points
      # obtained by: having a deck with n different cards and m different
      # suits where when drawing all cards, without putting them back in
@@ -13,7 +13,7 @@ card_game_sim <- function(suits, cards, x_greater_than, given_that, histogram=TR
      shuff_Deck<-c()
      Point_count<-c()
      Point_sums<-c()
-     for(l in 1:100000){
+     for(l in 1:experiments){
           set.seed(l)
           shuff_Deck<-sample(Deck)
           for(k in 1:cards){
@@ -50,5 +50,5 @@ card_game_sim <- function(suits, cards, x_greater_than, given_that, histogram=TR
      return(return_list)
      
 
-}     
+}
 
