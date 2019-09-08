@@ -5,8 +5,7 @@ card_game_sim <- function(suits, cards, x_greater_than, given_that, experiments=
      # obtained by: having a deck with n different cards and m different
      # suits where when drawing all cards, without putting them back in
      # the deck, you get a point for each time the subsequent card drawn
-     # has the same suit than the previous one. Calculations are done by
-     # simulating 100,000 random experiments
+     # has the same suit than the previous one
 
      Deck<-rep(c(letters[1:suits]),times=cards/suits)
      
